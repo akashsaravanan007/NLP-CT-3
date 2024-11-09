@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Filter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Product Reviews</h1>
+      <div class="filters">
+        <label for="ratingFilter">Filter by Rating:</label>
+        <select id="ratingFilter" onchange="filterReviews()">
+          <option value="all">All Ratings</option>
+          <option value="5">5 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="2">2 Stars</option>
+          <option value="1">1 Star</option>
+        </select>
+
+        <label for="topWorstFilter">View:</label>
+        <select id="topWorstFilter" onchange="filterReviews()">
+          <option value="all">All Reviews</option>
+          <option value="top10">Top 10 Reviews</option>
+          <option value="worst10">Worst 10 Reviews</option>
+        </select>
+      </div>
+      <div id="reviewContainer" class="review-container">
+        <!-- Reviews will be injected here by JavaScript -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
